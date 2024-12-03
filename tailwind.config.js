@@ -9,7 +9,11 @@ export default {
 			primary: "#03346E",
 			secondary: "#fafafa",
 		},
-		extend: {},
+		extend: {
+      width: {
+        '128': '32rem', 
+      },
+    },
 	},
   plugins: [],
 }

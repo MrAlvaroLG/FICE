@@ -10,7 +10,7 @@ const Dropdown: React.FC<DropdownProps> = ({ items, shiftLeft }) => {
 
     const containerClasses = `
         absolute font-bebas-neue shadow-xl rounded-md bg-secondary border border-primary transition-opacity duration-300
-        ${isMobileView ? 'flex flex-col relative mx-2 border-2 top-0' : 'grid grid-cols-2 w-96 top-7'}
+        ${isMobileView ? 'flex flex-col relative mx-2 border-2 top-0' : 'grid grid-cols-2 w-128 top-7'}
         ${shiftLeft ? 'right-0' : ''}
     `;
 
