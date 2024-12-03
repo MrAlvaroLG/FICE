@@ -1,10 +1,10 @@
 import './index.css'
+import { NavigationBar } from './components/Navbar/navbar'
+
 
 function App() {
   return (
-    <div className="">
-      Hello world!
-    </div>
+    <NavigationBar />
   )
 }
 
