@@ -7,13 +7,12 @@ import './navbar.css';
 
 export function NavigationBar() {
     const [isMenuOpen, setMenuOpen] = useState(false);
-    const toggleMenu = () => {
-        setMenuOpen(!isMenuOpen);
-    };
+    const toggleMenu = () => setMenuOpen(!isMenuOpen);
+
     return (
-        <nav className='navbar fixed top-0 flex flex-col md:flex-row justify-between items-center h-auto bg-secondary w-full z-50  !important :md:h-14 pt-4 py-4'>
+        <nav className='navbar fixed top-0 flex flex-col md:flex-row justify-between items-center bg-secondary w-full z-50 pt-4 py-4 md:h-14'>
             <div className="flex justify-between w-full md:w-auto">
-                <span className='text-2xl h-full text-primary px-4'>FICE</span>
+                <span className='text-2xl text-primary px-4'>FICE</span>
                 <button className="md:hidden text-primary absolute top-4 right-4" onClick={toggleMenu}>
                     {isMenuOpen ? Xmark : Burger}
                 </button>
