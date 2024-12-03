@@ -10,12 +10,12 @@ const Dropdown: React.FC<DropdownProps> = ({ items, shiftLeft }) => {
 
     const containerClasses = `
         absolute font-bebas-neue shadow-xl rounded-md bg-secondary border border-primary transition-opacity duration-300
-        ${isMobileView ? 'flex flex-col relative mx-2 border-2 top-0' : 'grid grid-cols-2 w-128 top-7'}
+        ${isMobileView ? 'flex flex-col relative mx-2 border-2 top-0' : 'grid grid-cols-2 w-96 top-7'}
         ${shiftLeft ? 'right-0' : ''}
     `;
 
     const itemClasses = `
-        block rounded-md py-2 text-s m-1 text-primary hover:bg-primary hover:text-secondary transition-colors duration-300
+        block rounded-md py-2 text-lg m-1 text-primary hover:bg-primary hover:text-secondary transition-colors duration-300
         ${isMobileView ? 'w-full' : 'w-50%'}
     `;
 

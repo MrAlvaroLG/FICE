@@ -1,4 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import './fonts/bebas_neue.css';
+@import './fonts/montserrat.css';
 
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: #fafafa;
+}
+
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.font-bebas-neue {
+    font-family: 'Bebas Neue', sans-serif;
+}
