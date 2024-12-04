@@ -1,0 +1,20 @@
+.parallax-container {
+    position: relative;
+    height: 100vh;
+    z-index: 0;
+}
+
+.parallax-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #fafafa, rgba(250, 250, 250, 0) 50%, #fafafa 100%), url('../../assets/parallax.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; 
+    z-index: -1;
+}

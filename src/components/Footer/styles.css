@@ -1,0 +1,35 @@
+.footer--box{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  text-align: center;
+  background-color: #03346E;
+  color: white;
+}
+.line{
+  width: 40%;
+  height: 0.5px;
+  border: solid 1px white;
+}
+.main--text{
+  margin: 0.1em;
+  font-size: 36px;
+}
+.zero--box,
+.first--box,
+.second--box,
+.third--box{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between ;
+  align-items: center;
+  margin: 0.3em 0.7em;
+}
+.zero--box{
+  margin: 0.3em 0;
+}
+.third--box{
+  padding: 0.7em;
+  margin: 0.7em 0 ;
+  border-bottom: 3px solid white;
+}

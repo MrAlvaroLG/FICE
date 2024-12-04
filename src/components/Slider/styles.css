@@ -1,0 +1,70 @@
+/* Slider styles */
+.main--box {
+  position: relative;
+}
+.carousel--box {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5em;
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 1em;
+}
+.news--main--text {
+  text-align: center;
+}
+.left--button,
+.right--button {
+  width: 5em;
+  height: 5em;
+  border-radius: 3em;
+  border: none;
+  margin: 1.5em;
+  z-index: 1;
+}
+.left--button--hide,
+.right--button--hide{
+  width: 5em;
+  height: 5em;
+  border-radius: 3em;
+  border: none;
+  margin: 1.5em;
+  z-index: -1;
+}
+.buttons--box {
+  position: absolute;
+  top: 32%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.new--box {
+  width: 384px;
+  border-radius: 1em;
+  transition: 0.7s;
+}
+.new--img {
+  display: inline-block;
+  width: 384px;
+  border-radius: 1em;
+}
+.new--text {
+  text-align: center;
+}
+@media screen and (max-width: 1440px) {
+  .carousel--box{
+    width: 792px;
+  }
+
+}
+@media screen and (max-width: 750px) {
+  .carousel--box{
+    width: 384px;
+  }
+}
