@@ -1,89 +1,40 @@
-import React, { useEffect, useState } from "react";
-import data from "./data.json";
-const viewporttWidth = window.innerWidth;
-import "./styles.css"
-
+import React, { useState } from 'react';
+import IconPrevious from '../../assets/icon-previous.svg';
+import IconNext from '../../assets/icon-next.svg';
+import data from './data.json';
 
 export function Slider() {
-  const [counter, setCounter] = useState(0);
-  const [i, seti] = useState(6);
-  const nextElement = () => {
-    if (viewporttWidth > 1440) {
-      if (counter < 6) {
-        setCounter(counter + 1);
-      }
-    } else if (viewporttWidth > 750) {
-      if (counter < 7) {
-        setCounter(counter + 1);
-      } else {
-        setCounter(counter);
-      }
-      seti(7);
-    } else {
-      if (counter < 8) {
-        setCounter(counter + 1);
-      } else {
-        setCounter(counter);
-      }
-      seti(8);
-    }
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? data.length - 1 : prevIndex - 1));
   };
-  const prevElement = () => {
-    if (counter != 0) {
-      setCounter(counter - 1);
-    } else {
-      setCounter(counter);
-    }
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === data.length - 1 ? 0 : prevIndex + 1));
   };
+
   return (
-    <>
-      <div className="main--box">
-        <h1 className="news--main--text">News</h1>
-        <div className="img--box">
-          <div className="carousel--box">
-            <div className="buttons--box">
-              <button
-                onClick={prevElement}
-                className={counter != 0 ? "left--button" : "left--button--hide"}
-              >
-                <img
-                  src="../src/assets/icon-previous.svg"
-                  alt=""
-                  className="previous--button"
-                />
-              </button>
-              <button
-                onClick={nextElement}
-                className={
-                  counter < i ? "right--button" : "right--button--hide"
-                }
-              >
-                <img
-                  src="../src/assets/icon-next.svg"
-                  alt=""
-                  className="next--button"
-                />
-              </button>
+    <div className="relative w-full max-w-4xl mx-auto my-20">
+      <h1 className="text-3xl text-center font-bebas-neue mb-4">News</h1>
+      <div className="overflow-hidden relative">
+        <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+          {data.map((item, index) => (
+            <div key={index} className="min-w-full flex flex-col">
+              <div className="w-full h-52 md:h-96">
+                <img src={item.image.desktop} alt={item.name} className="w-full h-full object-contain" />
+              </div>
+              <p className="text-center mt-2 font-montserrat text-xl">{item.name}</p>
             </div>
-            {data.map((obj) => {
-              return (
-                <div
-                  className="new--box"
-                  style={{ transform: `translateX(-${408 * counter}px)` }}
-                  key={obj.id}
-                >
-                  <img
-                    src={obj.image.desktop}
-                    alt="new--img"
-                    className="new--img"
-                  />
-                  <p className="new--text">{obj.name}</p>
-                </div>
-              );
-            })}
-          </div>
+          ))}
         </div>
+        <button onClick={prevSlide} className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">
+          <img src={IconPrevious} alt="Previous" className="w-6 h-6" />
+        </button>
+        <button onClick={nextSlide} className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">
+          <img src={IconNext} alt="Next" className="w-6 h-6" />
+        </button>
       </div>
-    </>
+    </div>
   );
 }

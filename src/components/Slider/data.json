@@ -1,31 +1,14 @@
 [
-  {
-    "image": {
-      "desktop": "../src/assets/ICPC_Foundation_logo.svg"
-    },
-    "name": "Vanilla Panna Cotta",
-    "id": 0
-  },
-  {
-    "image": {
-      "desktop": "../src/assets/hackaton-plus.jpg"
-    },
-    "name": "Waffle with Berries",
-
-    "id": 1
-  },
-  {
-    "image": {
-      "desktop": "../src/assets/image-creme-brulee-desktop.jpg"
-    },
-    "name": "Vanilla Bean Crème Brûlée",
-    "id": 2
-  },
-  {
-    "image": {
-      "desktop": "../src/assets/image-macaron-desktop.jpg"
-    },
-    "name": "Macaron Mix of Five",
-    "id": 3
-  }
+    {
+        "name": "ICPC",
+        "image": {
+            "desktop": "/src/assets/ICPC_Foundation_logo.svg"
+        }
+        },
+        {
+        "name": "HACKATON",
+        "image": {
+            "desktop": "/src/assets/hackaton-plus.jpg"
+        }
+    }
 ]
